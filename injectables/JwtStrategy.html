@@ -112,7 +112,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/auth/strategies/aws.strategy.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/auth/strategies/aws.strategy.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -190,8 +190,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/auth/strategies/aws.strategy.ts:29</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">src/auth/strategies/aws.strategy.ts:35</a></div>
                 </td>
             </tr>
 
@@ -229,7 +229,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
+                        <b>Returns : </b>        <code><a href="../interfaces/ValidatedUser.html" target="_self" >Promise&lt;ValidatedUser&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -252,6 +252,12 @@ import { AuthService } from &quot;../auth.service&quot;;
 import { passportJwtSecret } from &quot;jwks-rsa&quot;;
 import { AuthConfig } from &quot;../auth.config&quot;;
 
+interface ValidatedUser {
+  userId: any;
+  email: any;
+  isAdmin?: boolean;
+}
+
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy, &quot;jwt&quot;) {
   constructor(
@@ -273,8 +279,16 @@ export class JwtStrategy extends PassportStrategy(Strategy, &quot;jwt&quot;) {
     });
   }
 
-  public async validate(payload: any) {
-    return { userId: payload.sub, email: payload.email };
+  public async validate(payload: any): Promise&lt;ValidatedUser&gt; {
+    const user: ValidatedUser &#x3D; { userId: payload.sub, email: payload.email };
+    if (payload[&#x27;cognito:groups&#x27;] &amp;&amp; payload[&#x27;cognito:groups&#x27;].includes(&#x27;admin&#x27;)) {
+      console.log(&#x27;user is admin&#x27;)
+      user.isAdmin &#x3D; true;
+    } else {
+      console.log(&#x27;not admin&#x27;)
+      user.isAdmin &#x3D; false;
+    }
+    return user;
   }
 }
 </code></pre>

@@ -100,6 +100,10 @@
                             </li>
                             <li>
                                     <span class="modifier"></span>
+                                <a href="#findByMuscle" >findByMuscle</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
                                 <a href="#findOne" >findOne</a>
                             </li>
                             <li>
@@ -157,8 +161,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="13"
-                            class="link-to-prism">src/exercises_library/exercises_library.controller.ts:13</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">src/exercises_library/exercises_library.controller.ts:14</a></div>
                 </td>
             </tr>
 
@@ -235,8 +239,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="18"
-                            class="link-to-prism">src/exercises_library/exercises_library.controller.ts:18</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="19"
+                            class="link-to-prism">src/exercises_library/exercises_library.controller.ts:19</a></div>
                 </td>
             </tr>
 
@@ -247,6 +251,84 @@
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findByMuscle"></a>
+                    <span class="name">
+                        <span class="modifier"></span>
+                        <span ><b>findByMuscle</b></span>
+                        <a href="#findByMuscle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findByMuscle(muscle: MuscleGroup)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;muscle&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/exercises_library/exercises_library.controller.ts:24</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>muscle</td>
+                                    <td>
+                                            <code>MuscleGroup</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -281,8 +363,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">src/exercises_library/exercises_library.controller.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/exercises_library/exercises_library.controller.ts:29</a></div>
                 </td>
             </tr>
 
@@ -359,8 +441,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">src/exercises_library/exercises_library.controller.ts:33</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/exercises_library/exercises_library.controller.ts:39</a></div>
                 </td>
             </tr>
 
@@ -437,8 +519,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="28"
-                            class="link-to-prism">src/exercises_library/exercises_library.controller.ts:28</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/exercises_library/exercises_library.controller.ts:34</a></div>
                 </td>
             </tr>
 
@@ -502,11 +584,12 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Get, Post, Body, Patch, Param, Delete } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Get, Post, Body, Patch, Param, Delete, Query } from &#x27;@nestjs/common&#x27;;
 import { ExercisesLibraryService } from &#x27;./exercises_library.service&#x27;;
 import { CreateExercisesLibraryDto } from &#x27;./dto/create-exercises_library.dto&#x27;;
 import { UpdateExercisesLibraryDto } from &#x27;./dto/update-exercises_library.dto&#x27;;
 import { Public } from &#x27;src/common/decorators&#x27;;
+import { MuscleGroup } from &#x27;@prisma/client&#x27;;
 
 @Controller(&#x27;exercises-library&#x27;)
 export class ExercisesLibraryController {
@@ -521,6 +604,11 @@ export class ExercisesLibraryController {
   @Get()
   findAll() {
     return this.exercisesLibraryService.findAll();
+  }
+
+  @Get(&#x27;muscle&#x27;)
+  findByMuscle(@Query(&#x27;muscle&#x27;) muscle: MuscleGroup) {
+    return this.exercisesLibraryService.findByMuscle(muscle)
   }
 
   @Get(&#x27;:id&#x27;)

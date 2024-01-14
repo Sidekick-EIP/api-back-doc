@@ -105,10 +105,18 @@
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
+                                <a href="#getAllv2" >getAllv2</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#handleConnection" >handleConnection</a>
                             </li>
                             <li>
                                 <a href="#handleDisconnect" >handleDisconnect</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#handleMatch" >handleMatch</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
@@ -145,7 +153,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/chat/chat.service.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/chat/chat.service.ts:12</a></div>
                             </td>
                         </tr>
 
@@ -222,8 +230,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="116"
-                            class="link-to-prism">src/chat/chat.service.ts:116</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="118"
+                            class="link-to-prism">src/chat/chat.service.ts:118</a></div>
                 </td>
             </tr>
 
@@ -275,6 +283,89 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getAllv2"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getAllv2</b></span>
+                        <a href="#getAllv2"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getAllv2(email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, cursor: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="142"
+                            class="link-to-prism">src/chat/chat.service.ts:142</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>email</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>cursor</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="handleConnection"></a>
                     <span class="name">
                         <span class="modifier">Async</span>
@@ -293,8 +384,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="16"
-                            class="link-to-prism">src/chat/chat.service.ts:16</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/chat/chat.service.ts:20</a></div>
                 </td>
             </tr>
 
@@ -355,7 +446,7 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>handleDisconnect(socket: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+<code>handleDisconnect(socket: Socket)</code>
                 </td>
             </tr>
 
@@ -386,7 +477,7 @@
                                 <tr>
                                     <td>socket</td>
                                     <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <code>Socket</code>
                                     </td>
 
                                     <td>
@@ -402,6 +493,89 @@
                     </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleMatch"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>handleMatch</b></span>
+                        <a href="#handleMatch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>handleMatch(event: <a href="../classes/MatchEvent.html" target="_self">MatchEvent</a>, server: Server)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="172"
+                            class="link-to-prism">src/chat/chat.service.ts:172</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="../classes/MatchEvent.html" target="_self" >MatchEvent</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>server</td>
+                                    <td>
+                                            <code>Server</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </div>
                     <div class="io-description">
@@ -433,8 +607,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="72"
-                            class="link-to-prism">src/chat/chat.service.ts:72</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">src/chat/chat.service.ts:73</a></div>
                 </td>
             </tr>
 
@@ -516,8 +690,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="97"
-                            class="link-to-prism">src/chat/chat.service.ts:97</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">src/chat/chat.service.ts:99</a></div>
                 </td>
             </tr>
 
@@ -599,8 +773,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="91"
-                            class="link-to-prism">src/chat/chat.service.ts:91</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="93"
+                            class="link-to-prism">src/chat/chat.service.ts:93</a></div>
                 </td>
             </tr>
 
@@ -685,7 +859,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/chat/chat.service.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/chat/chat.service.ts:12</a></div>
                         </td>
                     </tr>
 
@@ -699,19 +873,23 @@
 
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &quot;@nestjs/common&quot;;
-import { Socket } from &quot;socket.io&quot;;
+import { Server, Socket } from &quot;socket.io&quot;;
 import { PrismaService } from &quot;../prisma/prisma.service&quot;;
 import { UserInfoService } from &quot;../user_infos/user_infos.service&quot;;
 import { Rooms } from &quot;./chat.helper&quot;;
+import { MatchEvent } from &quot;../common/events/match.event&quot;;
+
+const pageSize &#x3D; 15;
 
 @Injectable()
 export class ChatService {
   private rooms &#x3D; new Rooms();
 
+
   constructor(
     private userInfosService: UserInfoService,
     private prismaService: PrismaService,
-  ) {}
+  ) { }
 
   async handleConnection(socket: Socket) {
     const userId &#x3D; socket.handshake.auth.token;
@@ -727,14 +905,9 @@ export class ChatService {
       socket.disconnect();
       return;
     }
-    const sidekick &#x3D; user.sidekick_id;
+    const sidekick &#x3D; user.sidekick_id || &quot;&quot;;
 
-    if (!sidekick) {
-      socket.disconnect();
-      return;
-    }
-
-    const roomName &#x3D; [userId, sidekick].sort().join(&quot;_&quot;);
+    let roomName &#x3D; sidekick &#x3D;&#x3D;&#x3D; &quot;&quot; ? userId : [userId, sidekick].sort().join(&quot;_&quot;);
     let room &#x3D; this.rooms.getRoom(roomName);
     if (!room) {
       room &#x3D; {
@@ -749,15 +922,17 @@ export class ChatService {
       sidekickId: sidekick,
     });
 
+    console.log(&quot;connect &quot;, socket.id, userId, sidekick, roomName);
     socket.join(roomName);
 
     /* socket.emit(&quot;message&quot;, &quot;You are connected to the room &quot; + roomName); */
   }
 
-  handleDisconnect(socket: any) {
+  handleDisconnect(socket: Socket) {
     const user &#x3D; this.rooms.findUserBySocketId(socket.id);
     // socket.handshake.auth.token also works to get the user id
 
+    console.log(&quot;disconnect &quot;, socket.id, user?.userId);
     if (!user) {
       return;
     }
@@ -774,6 +949,7 @@ export class ChatService {
 
     // save message to db
     const user &#x3D; this.rooms.findUserBySocketId(socket.id);
+    console.log(this.rooms, this.rooms.getRoomUsers(user.userId))
 
     if (!user) return;
 
@@ -834,6 +1010,75 @@ export class ChatService {
           },
         ],
       },
+    });
+  }
+
+  async getAllv2(email: string, cursor: string) {
+    const user &#x3D; await this.prismaService.user.findUnique({
+      where: {
+        email: email,
+      },
+    });
+    const fullUser &#x3D; await this.userInfosService.find(email);
+
+    return await this.prismaService.message.findMany({
+      take: pageSize,
+      skip: cursor ? 1 : 0,
+      cursor: cursor ? { id: cursor } : undefined,
+      where: {
+        OR: [
+          {
+            from_id: user.id,
+            to: fullUser.sidekick_id,
+          },
+          {
+            from_id: fullUser.sidekick_id,
+            to: user.id,
+          },
+        ],
+      },
+      orderBy: {
+        createdAt: &quot;desc&quot;,
+      }
+    });
+  }
+
+  async handleMatch(event: MatchEvent, server: Server) {
+    const room1 &#x3D; this.rooms.getRoom(event.id1);
+    const room2 &#x3D; this.rooms.getRoom(event.id2);
+
+    console.log(room1, room2, event.id1, event.id2)
+    if (!room1 &amp;&amp; !room2) {
+      console.log(&quot;room not found&quot;)
+      return;
+    }
+    console.log(&quot;match event&quot;, room1, room2)
+    const socket1 &#x3D; server.sockets.sockets.get(room1?.users[0]?.socketId);
+    console.log(socket1)
+    const socket2 &#x3D; server.sockets.sockets.get(room2?.users[0]?.socketId);
+    console.log(socket2)
+    socket1?.emit(&quot;match&quot;, true);
+    socket2?.emit(&quot;match&quot;, true);
+
+    // remove both rooms
+    this.rooms.removeRoom(event.id1);
+    this.rooms.removeRoom(event.id2);
+
+    // create new room
+    const roomName &#x3D; [event.id1, event.id2].sort().join(&quot;_&quot;);
+    socket1?.join(roomName);
+    socket2?.join(roomName);
+
+    this.rooms.addUserToRoom(roomName, {
+      socketId: socket1?.id || &quot;&quot;,
+      userId: event.id1,
+      sidekickId: event.id2,
+    });
+
+    this.rooms.addUserToRoom(roomName, {
+      socketId: socket2?.id || &quot;&quot;,
+      userId: event.id2,
+      sidekickId: event.id1,
     });
   }
 }

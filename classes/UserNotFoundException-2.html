@@ -68,7 +68,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/user_infos/exceptions/not-found.exception.ts</code>
+            <code>src/workouts/exceptions/not-found.exception.ts</code>
         </p>
 
 
@@ -89,12 +89,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(postid: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+<code>constructor(postemail: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="3" class="link-to-prism">src/user_infos/exceptions/not-found.exception.ts:3</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="3" class="link-to-prism">src/workouts/exceptions/not-found.exception.ts:3</a></div>
                             </td>
                         </tr>
 
@@ -112,7 +112,7 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>postid</td>
+                                                        <td>postemail</td>
                                                   
                                                         <td>
                                                                         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
@@ -146,14 +146,8 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NotFoundException } from &quot;@nestjs/common&quot;;
 
 class UserNotFoundException extends NotFoundException {
-    constructor(postid: string) {
-        super(&#x27;User with id &#x27; + postid + &#x27; not found&#x27;);
-    }
-}
-
-export class UserWithoutSidekickException extends NotFoundException {
-    constructor(postid: string) {
-        super(&#x27;User with id &#x27; + postid + &#x27; doesn\&#x27;t have sidekick&#x27;);
+    constructor(postemail: string) {
+        super(&#x27;User with email &#x27; + postemail + &#x27; not found.&#x27;);
     }
 }
 

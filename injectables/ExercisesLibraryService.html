@@ -94,6 +94,11 @@
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
+                                <a href="#findByMuscle" >findByMuscle</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
                                 <a href="#findOne" >findOne</a>
                             </li>
                             <li>
@@ -127,7 +132,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/exercises_library/exercises_library.service.ts:7</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/exercises_library/exercises_library.service.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -192,8 +197,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="10"
-                            class="link-to-prism">src/exercises_library/exercises_library.service.ts:10</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="11"
+                            class="link-to-prism">src/exercises_library/exercises_library.service.ts:11</a></div>
                 </td>
             </tr>
 
@@ -263,8 +268,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">src/exercises_library/exercises_library.service.ts:26</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/exercises_library/exercises_library.service.ts:28</a></div>
                 </td>
             </tr>
 
@@ -284,8 +289,80 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="findByMuscle"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>findByMuscle</b></span>
+                        <a href="#findByMuscle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findByMuscle(muscle: MuscleGroup)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/exercises_library/exercises_library.service.ts:34</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>muscle</td>
+                                    <td>
+                                            <code>MuscleGroup</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="findOne"></a>
                     <span class="name">
+                        <span class="modifier">Public</span>
                         <span class="modifier">Async</span>
                         <span ><b>findOne</b></span>
                         <a href="#findOne"><span class="icon ion-ios-link"></span></a>
@@ -302,8 +379,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/exercises_library/exercises_library.service.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/exercises_library/exercises_library.service.ts:44</a></div>
                 </td>
             </tr>
 
@@ -373,8 +450,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="61"
-                            class="link-to-prism">src/exercises_library/exercises_library.service.ts:61</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="74"
+                            class="link-to-prism">src/exercises_library/exercises_library.service.ts:74</a></div>
                 </td>
             </tr>
 
@@ -444,8 +521,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="42"
-                            class="link-to-prism">src/exercises_library/exercises_library.service.ts:42</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">src/exercises_library/exercises_library.service.ts:54</a></div>
                 </td>
             </tr>
 
@@ -515,13 +592,14 @@
 import { CreateExercisesLibraryDto } from &#x27;./dto/create-exercises_library.dto&#x27;;
 import { UpdateExercisesLibraryDto } from &#x27;./dto/update-exercises_library.dto&#x27;;
 import { PrismaService } from &#x27;src/prisma/prisma.service&#x27;;
+import { MuscleGroup } from &#x27;@prisma/client&#x27;;
 
 @Injectable()
 export class ExercisesLibraryService {
   constructor(private prisma: PrismaService) { }
 
   async create(createExercisesLibraryDto: CreateExercisesLibraryDto) {
-    const { name, description, video, thumbnail, muscleGroup } &#x3D; createExercisesLibraryDto;
+    const { name, description, video, thumbnail, muscleGroup, met } &#x3D; createExercisesLibraryDto;
 
     const exercisesLibrary &#x3D; await this.prisma.exercises_Library.create({
       data: {
@@ -530,6 +608,7 @@ export class ExercisesLibraryService {
         video,
         thumbnail,
         muscle_group: muscleGroup,
+        met: met,
       },
     });
 
@@ -542,7 +621,17 @@ export class ExercisesLibraryService {
     return exercisesLibrary;
   }
 
-  async findOne(id: number) {
+  async findByMuscle(muscle: MuscleGroup) {
+    const exercisesLibrary &#x3D; await this.prisma.exercises_Library.findMany({
+      where: {
+        muscle_group: muscle,
+      }
+    });
+
+    return exercisesLibrary;
+  }
+
+  public async findOne(id: number) {
     const exercisesLibrary &#x3D; await this.prisma.exercises_Library.findUnique({
       where: {
         id,
@@ -553,7 +642,7 @@ export class ExercisesLibraryService {
   }
 
   async update(id: number, updateExercisesLibraryDto: UpdateExercisesLibraryDto) {
-    const { name, description, video, thumbnail, muscleGroup } &#x3D; updateExercisesLibraryDto;
+    const { name, description, video, thumbnail, muscleGroup, met } &#x3D; updateExercisesLibraryDto;
 
     const exercisesLibrary &#x3D; await this.prisma.exercises_Library.update({
       where: {
@@ -565,6 +654,7 @@ export class ExercisesLibraryService {
         video,
         thumbnail,
         muscle_group: muscleGroup,
+        met: met
       },
     });
 
